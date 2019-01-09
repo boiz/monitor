@@ -1,0 +1,24 @@
+.d-none{
+	display:none;
+}
+
+#toclone,#dashtoclone,.badge{
+	display:none;
+}
+
+.loadmore{
+	cursor: pointer;
+}
+
+.theme_radar{
+	margin:auto;
+}
+
+.theme_radar .pace_activity{
+	border-top-color:gray;
+	border-bottom-color:gray;
+}
+
+.v-hidden{
+	visibility: hidden;
+}
