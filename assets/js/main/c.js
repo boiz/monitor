@@ -147,7 +147,7 @@ getXHR(`http://${ip}:3001/imap`,"json",res=>{
 	//loadmore.onclick=()=>makePost();
 
 	onscroll=()=>{
-		if(tillBottom()==0) makePost();
+		if(tillBottom()==0&&loading3.className=="d-none") makePost();
 	}
 
 });
