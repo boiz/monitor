@@ -26,6 +26,9 @@ let setLoading=(status,selector)=>{
 	else if(status=="off") selector.classList.add("d-none");
 }
 
+const len=mycolors.length;
+
+
 setLoading("on",loading);
 setLoading("on",loading3);
 
@@ -43,7 +46,7 @@ getXHR(`http://${ip}:3001/imap`,"json",res=>{
 
 			clone.querySelector(".store").innerText=x.store;
 			clone.querySelector(".time").innerText=x.time;
-			clone.querySelector(".color").classList.add(`bg-${mycolors[i]}-400`);
+			clone.querySelector(".color").classList.add(`bg-${mycolors[i%len]}-400`);
 			clone.querySelector(".letter-icon").innerText=x.store[0].toUpperCase();
 			clone.querySelector(".skipped").innerText=x.skipped;
 			clone.querySelector(".copied").innerText=x.copied;
@@ -103,6 +106,9 @@ getXHR(`http://${ip}:3001/imap`,"json",res=>{
 
 						let i=stores.indexOf(x.store);
 
+
+
+
 						let clone=dashsample.cloneNode(true);
 						
 						clone.querySelector(".store").innerText=x.store;
@@ -115,7 +121,7 @@ getXHR(`http://${ip}:3001/imap`,"json",res=>{
 
 
 
-						clone.querySelector(".color").classList.add(`bg-${mycolors[i]}-400`);
+						clone.querySelector(".color").classList.add(`bg-${mycolors[i%len]}-400`);
 						
 						//clone.querySelector(".ip").innerText=x.ip;
 						
